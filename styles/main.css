@@ -30,8 +30,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  width: 130px;
+  height: 30px;
+  width: 170px;
 }
 
 /* Debugging (Only un-comment these when testing) */
@@ -52,10 +52,10 @@
 	border: 1px solid purple;
 }
 
-.headline-socials a {
+.headline-socials li {
 	border: 1px solid black;
 }
 
-.headline-socials a img {
+.headline-socials img {
 	border: 1px solid yellow;
 } */
