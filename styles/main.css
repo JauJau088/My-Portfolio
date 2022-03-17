@@ -34,6 +34,24 @@
   width: 170px;
 }
 
+.headline-action {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
+.headline-down-arrow {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #dfe1e6;
+  border-radius: 50%;
+}
+
+.headline-down-arrow img {
+  width: 12px;
+}
+
 /* Debugging (Only un-comment these when testing) */
 
 /* .nav {
