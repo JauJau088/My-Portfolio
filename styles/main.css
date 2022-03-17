@@ -1,0 +1,61 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+}
+
+.nav-logo {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+  padding: 68px 24px 0 24px;
+  background-image: url("../images/backgrounds/header-illsutration-mobile.svg");
+}
+
+.headline-primary,
+.headline-sub {
+  text-align: center;
+}
+
+.headline-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 130px;
+}
+
+/* Debugging (Only un-comment these when testing) */
+
+/* .nav {
+	border: 1px solid red;
+}
+
+.nav > * {
+	border: 1px solid greenyellow;
+}
+
+.headline {
+	border: 1px solid blue;
+}
+
+.headline > * {
+	border: 1px solid purple;
+}
+
+.headline-socials a {
+	border: 1px solid black;
+}
+
+.headline-socials a img {
+	border: 1px solid yellow;
+} */
