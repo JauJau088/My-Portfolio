@@ -1,10 +1,34 @@
 /* Color schemes */
-.dark-blue {
+.text-blue {
   color: #172b4d;
 }
 
-.green {
+.text-green {
   color: #36b37e;
+}
+
+.text-green-dark {
+  color: #3a4a42;
+}
+
+.text-white {
+  color: white;
+}
+
+.blue {
+  background-color: #172b4d;
+}
+
+.green {
+  background-color: #36b37e;
+}
+
+.grey {
+  background-color: #ebf0ee;
+}
+
+.white {
+  background-color: white;
 }
 
 /* Fonts */
@@ -12,9 +36,20 @@ body {
   font-family: Inter, Arial, sans-serif;
 }
 
-h1 {
+h1,
+h2 {
   font-weight: 700;
   font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
 }
 
 p {

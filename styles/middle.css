@@ -1,0 +1,90 @@
+/* Middle section */
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 22px 22px 64px 22px;
+}
+
+.section-title h2 {
+  margin-bottom: 24px;
+}
+
+.small-line {
+  width: 48px;
+  height: 4px;
+}
+
+.work-container {
+  display: grid;
+  grid-template-columns: 327px;
+  grid-template-rows: 474px;
+  gap: 24px;
+  justify-content: center;
+  margin: 0;
+}
+
+.work {
+  display: grid;
+  grid-template-columns: 327px;
+  grid-template-rows: 252px 222px;
+  justify-content: center;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+}
+
+.work-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  margin: 2px 1px;
+}
+
+.work-title {
+  display: flex;
+  margin: 16px;
+  text-align: center;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+}
+
+.tag li {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin: 0 4px;
+  border-radius: 4px;
+}
+
+.tag li span {
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.see-project-button {
+  width: 122px;
+  height: 48px;
+  margin-top: auto;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+/* Debugging (Only un-comment these when testing) */
+
+/* .work {
+  border: 1px solid goldenrod;
+}
+
+.work > * {
+  border: 1px solid blueviolet;
+} */

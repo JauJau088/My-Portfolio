@@ -1,10 +1,12 @@
 /* Global others */
-body {
+html {
   box-sizing: border-box;
 }
 
-h1 {
-  margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 a,
@@ -18,4 +20,9 @@ a:active {
 ul {
   list-style: none;
   padding: 0;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
 }

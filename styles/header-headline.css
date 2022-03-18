@@ -1,3 +1,4 @@
+/* Header section */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -11,17 +12,17 @@
   font-size: 24px;
 }
 
+/* Headline section */
 .headline {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 500px;
+  height: 650px;
   padding: 68px 24px 0 24px;
   background-image: url("../images/backgrounds/header-illsutration-mobile.svg");
 }
 
-.headline-primary,
 .headline-sub {
   text-align: center;
 }
@@ -55,25 +56,25 @@
 /* Debugging (Only un-comment these when testing) */
 
 /* .nav {
-	border: 1px solid red;
+  border: 1px solid red;
 }
 
 .nav > * {
-	border: 1px solid greenyellow;
+  border: 1px solid greenyellow;
 }
 
 .headline {
-	border: 1px solid blue;
+  border: 1px solid blue;
 }
 
 .headline > * {
-	border: 1px solid purple;
+  border: 1px solid purple;
 }
 
 .headline-socials li {
-	border: 1px solid black;
+  border: 1px solid black;
 }
 
 .headline-socials img {
-	border: 1px solid yellow;
+  border: 1px solid yellow;
 } */
