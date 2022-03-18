@@ -1,6 +1,43 @@
+/* Global */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 /* Color schemes */
 .text-blue {
   color: #172b4d;
+}
+
+.text-blue-2 {
+  color: #344563;
+}
+
+.text-blue-3 {
+  color: #42526e;
 }
 
 .text-green {
@@ -31,11 +68,7 @@
   background-color: white;
 }
 
-/* Fonts */
-body {
-  font-family: Inter, Arial, sans-serif;
-}
-
+/* Texts */
 h1,
 h2 {
   font-weight: 700;
@@ -53,6 +86,29 @@ h4 {
 }
 
 p {
-  font-weight: 400;
-  font-size: 20px;
+  margin: 0;
+}
+
+/* Buttons */
+.button-1 {
+  background-color: #36b37e;
+  margin-top: auto;
+  margin-bottom: 24px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 17px;
+  color: white;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.button-1:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.button-1:active {
+  background: #008552;
 }

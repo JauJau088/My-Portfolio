@@ -1,16 +1,25 @@
-/* Middle section */
+/* Middle section (general) */
 .section-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 22px 22px 64px 22px;
+  margin: 68px 22px 64px 22px;
 }
 
 .section-title h2 {
   margin-bottom: 24px;
 }
 
+.section-sub {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0 12px 24px 12px;
+}
+
+/* Middle section: Works section */
 .small-line {
   width: 48px;
   height: 4px;
@@ -48,35 +57,23 @@
   text-align: center;
 }
 
-.tag {
+.work-tag {
   display: flex;
   justify-content: center;
 }
 
-.tag li {
+.work-tag li {
   display: flex;
   align-items: center;
-  height: 32px;
   margin: 0 4px;
   border-radius: 4px;
 }
 
-.tag li span {
+.work-tag span {
   padding: 8px 12px;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-}
-
-.see-project-button {
-  width: 122px;
-  height: 48px;
-  margin-top: auto;
-  margin-bottom: 24px;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
 }
 
 /* Debugging (Only un-comment these when testing) */
@@ -88,3 +85,75 @@
 .work > * {
   border: 1px solid blueviolet;
 } */
+
+/* Middle section: About me section */
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text .section-title {
+  margin-bottom: 0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 327px;
+  grid-template-rows: 352px;
+  row-gap: 24px;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border: 1px solid #c1c7d0;
+  border-radius: 8px;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 64px;
+  border-radius: 50%;
+  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
+
+.card-text span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.card-tag {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-tag li {
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  border-radius: 8px;
+}
+
+.card-tag span {
+  padding: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}

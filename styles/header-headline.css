@@ -25,6 +25,9 @@
 
 .headline-sub {
   text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .headline-socials {
