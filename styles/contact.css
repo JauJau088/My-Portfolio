@@ -9,6 +9,10 @@
   background-position: bottom right;
 }
 
+.contact-section .headline-socials {
+  margin: 0;
+}
+
 .contact-description {
   padding: 0 24px;
 }
