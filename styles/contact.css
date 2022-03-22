@@ -20,7 +20,6 @@ textarea::placeholder {
 /* Contact section */
 .contact-section {
   margin-top: 44px;
-  margin-bottom: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,10 +63,17 @@ textarea::placeholder {
 
 .contact-section .headline-socials {
   margin-top: 4px;
-  margin-bottom: 17px;
 }
 
-.contact-section p {
+/* Footer section */
+.footer-section {
+  margin-top: 10px;
+  margin-bottom: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-section p {
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
