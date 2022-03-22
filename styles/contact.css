@@ -20,6 +20,7 @@ textarea::placeholder {
 /* Contact section */
 .contact-section {
   margin-top: 44px;
+  margin-bottom: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,10 +47,26 @@ textarea::placeholder {
 .contact-form textarea {
   height: 114px;
   min-width: 327px;
-  border: 1px solid #60C095;
+  border: 1px solid #60c095;
   border-radius: 4px;
 }
 
 .contact-form li {
   margin-bottom: 24px;
+}
+
+.contact-form li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-section .headline-socials {
+  margin-top: 4px;
+  margin-bottom: 17px;
+}
+
+.contact-section p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #42526e;
 }
