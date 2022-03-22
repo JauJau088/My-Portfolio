@@ -10,7 +10,7 @@
 }
 
 .contact-section .headline-socials {
-  margin: 0;
+  margin: 4px 0 0 0;
 }
 
 .contact-description {
@@ -49,8 +49,4 @@
 
 .contact-form li:last-child {
   margin-bottom: 0;
-}
-
-.contact-section .headline-socials {
-  margin-top: 4px;
 }
