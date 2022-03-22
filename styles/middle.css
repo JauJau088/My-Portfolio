@@ -92,6 +92,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("../images/backgrounds/illustration\ 1-\ about\ me-mobile.svg"), url("../images/backgrounds/illustration\ 2-about\ me\ mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
 }
 
 .about-me-text .section-title {
