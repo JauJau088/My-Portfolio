@@ -1,3 +1,23 @@
+/* Typography */
+input::placeholder {
+  padding: 15px 16px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #6b778c;
+}
+
+textarea::placeholder {
+  padding: 12px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #091e42;
+}
+
+/* Contact section */
 .contact-section {
   margin-top: 44px;
 }
@@ -10,6 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 58px;
 }
 
 .contact-form input {
@@ -17,4 +38,15 @@
   border: 1px solid #d0d9d4;
   border-radius: 4px;
   min-width: 327px;
+}
+
+.contact-form textarea {
+  height: 114px;
+  min-width: 327px;
+  border: 1px solid #60C095;
+  border-radius: 4px;
+}
+
+.contact-form li {
+  margin-bottom: 24px;
 }
