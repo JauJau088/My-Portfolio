@@ -1,5 +1,6 @@
+/* == Mobile version == */
 /* Header section */
-.nav {
+.nav-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,11 +21,23 @@
 .headline {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.headline-container {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 650px;
   padding: 68px 24px 0 24px;
-  background-image: url("../images/backgrounds/header-illsutration-mobile.svg");
+}
+
+.headline-container > * {
+  margin-bottom: 58px;
+}
+
+.headline-container > *:last-child {
+  margin-bottom: 0;
 }
 
 .headline-sub {
@@ -60,38 +73,30 @@
   width: 12px;
 }
 
-/* Debugging (Only un-comment these when testing) */
-
-/* .nav {
-  border: 1px solid red;
+/* == Extra items for Mobile version == */
+@media screen and (max-width: 767px) {
+  .bg-mobile {
+    background-image: url("../images/backgrounds/header-illsutration-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 }
 
-.nav > * {
-  border: 1px solid greenyellow;
-}
-
-.headline {
-  border: 1px solid blue;
-}
-
-.headline > * {
-  border: 1px solid purple;
-}
-
-.headline-socials li {
-  border: 1px solid black;
-}
-
-.headline-socials img {
-  border: 1px solid yellow;
-} */
-
+/* == Desktop version == */
 @media screen and (min-width: 768px) {
+  /* Header section */
+  .bg-desktop {
+    background-image: url("../images/backgrounds/Header-llustration-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
   .nav {
     display: flex;
     height: 72px;
     justify-content: center;
-    border: 1px solid red;
   }
 
   .nav-mobile {
@@ -99,14 +104,20 @@
   }
 
   .nav-desktop {
-    display: block;
-    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
   }
 
   .nav-desktop ul {
     display: flex;
     justify-content: space-between;
-    width: 255px;
+    width: 100%;
+  }
+
+  .nav-desktop li {
+    width: fit-content;
   }
 
   .nav-desktop a {
@@ -114,10 +125,25 @@
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
-    border: 1px solid yellow;
   }
 
   .nav-desktop a:hover {
     cursor: pointer;
+  }
+
+  /* Headline section */
+  .headline-container {
+    max-width: 920px;
+    margin-bottom: 390px;
+    padding-top: 160px;
+  }
+
+  .headline-container > * {
+    margin-bottom: 24px;
+  }
+
+  .headline-sub {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
