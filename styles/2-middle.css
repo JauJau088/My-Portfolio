@@ -1,14 +1,24 @@
+/* == Mobile version == */
 /* Middle section (general) */
+.works-section {
+  --grid-min-width: 327px;
+  --grid-max-width: 369px;
+  margin-top: 68px;
+}
+
+.middle-section-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(--grid-min-width, --grid-max-width));
+  justify-content: center;
+  gap: 24px;
+}
+
 .section-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 68px 22px 64px 22px;
-}
-
-.section-title h2 {
-  margin-bottom: 24px;
+  margin: 0 22px;
 }
 
 .section-sub {
@@ -19,26 +29,17 @@
   margin: 0 12px 24px 12px;
 }
 
-/* Middle section: Works section */
-.small-line {
-  width: 48px;
-  height: 4px;
-}
-
+/* Works section */
 .work-container {
-  display: grid;
-  grid-template-columns: 327px;
-  grid-template-rows: 474px;
-  gap: 24px;
-  justify-content: center;
-  margin: 0;
+  margin: 62px 24px 0 24px;
 }
 
 .work {
-  display: grid;
-  grid-template-columns: 327px;
-  grid-template-rows: 252px 222px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 474px;
+  min-width: var(--grid-min-width);
+  max-width: var(--grid-max-width);
   border: 1px solid #d0d9d4;
   border-radius: 8px;
 }
@@ -47,8 +48,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 222px;
   border-radius: 8px;
-  margin: 2px 1px;
+  margin: auto 1px 1px 1px;
 }
 
 .work-title {
@@ -73,38 +75,36 @@
   line-height: 16px;
 }
 
-/* Debugging (Only un-comment these when testing) */
-
-/* .work {
-  border: 1px solid goldenrod;
-}
-
-.work > * {
-  border: 1px solid blueviolet;
-} */
-
-/* Middle section: About me section */
-.about-me-text {
+/* About me section */
+.about-me-text-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-image: url("../images/backgrounds/illustration\ 1-\ about\ me-mobile.svg"), url("../images/backgrounds/illustration\ 2-about\ me\ mobile.svg");
   background-repeat: no-repeat;
   background-position: top right, bottom left;
 }
 
-.about-me-text .section-title {
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text > * {
+  margin-bottom: 24px;
+}
+
+.about-me-text > *:last-child {
   margin-bottom: 0;
 }
 
+.about-me-text .section-title {
+  margin-top: 68px;
+}
+
 .card-container {
-  display: grid;
-  grid-template-columns: 327px;
-  grid-template-rows: 352px;
-  row-gap: 24px;
-  justify-content: center;
-  margin-top: 35px;
+  margin: 35px 24px 0 24px;
 }
 
 .card {
@@ -153,4 +153,68 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
+}
+
+/* == Extra items for Mobile version == */
+@media screen and (max-width: 767px) {
+  .section-title h2 {
+    margin-bottom: 24px;
+  }
+  
+  .small-line {
+    width: 48px;
+    height: 4px;
+  }
+}
+
+/* == Desktop version == */
+@media screen and (min-width: 768px) {
+  .middle-section-grid {
+    /* Somehow, I can't use var declared outside of here, including root var.
+       So, pay attention to the minmax value of the grid,
+       make sure they are the same with the var values used outside */
+    grid-template-columns: repeat(2, minmax(327px, 369px));
+    column-gap: 24px;
+    row-gap: 32px;
+  }
+
+  /* Works section */
+  .works-section {
+    margin-top: 102px;
+  }
+
+  .work-container {
+    margin-top: 52px;
+  }
+
+  /* About me section */
+  .about-me {
+    margin-top: 88px;
+  }
+
+  .about-me-text-container {
+    background-image: url("../images/backgrounds/illustration\ about\ me\ desktop.svg"), url("../images/backgrounds/illustration-about-me-2-desktop.svg");
+    background-position: top right, bottom 26px left;
+  }
+
+  .about-me-text {
+    max-width: 920px;
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+
+  .about-me-text .section-title {
+    margin-top: 104px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .middle-section-grid {
+    /* Somehow, I can't use var declared outside of here, including root var.
+       So, pay attention to the minmax value of the grid,
+       make sure they are the same with the var values used outside */
+    grid-template-columns: repeat(3, minmax(327px, 369px));
+    column-gap: 24px;
+    row-gap: 32px;
+  }
 }
