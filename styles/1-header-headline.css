@@ -12,6 +12,10 @@
   font-size: 24px;
 }
 
+.nav-desktop {
+  display: none;
+}
+
 /* Headline section */
 .headline {
   display: flex;
@@ -81,3 +85,39 @@
 .headline-socials img {
   border: 1px solid yellow;
 } */
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    height: 72px;
+    justify-content: center;
+    border: 1px solid red;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: block;
+    border: 1px solid blue;
+  }
+
+  .nav-desktop ul {
+    display: flex;
+    justify-content: space-between;
+    width: 255px;
+  }
+
+  .nav-desktop a {
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    border: 1px solid yellow;
+  }
+
+  .nav-desktop a:hover {
+    cursor: pointer;
+  }
+}
