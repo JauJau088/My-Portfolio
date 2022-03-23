@@ -104,7 +104,7 @@
 }
 
 .card-container {
-  margin: 35px 24px 0 24px;
+  margin: 59px 24px 0 24px;
 }
 
 .card {
@@ -142,6 +142,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 8px;
 }
 
 .card-tag li {
@@ -156,14 +157,11 @@
 }
 
 /* == Extra items for Mobile version == */
-@media screen and (max-width: 767px) {
-  .section-title h2 {
-    margin-bottom: 24px;
-  }
-  
+@media screen and (max-width: 767px) {  
   .small-line {
     width: 48px;
     height: 4px;
+    margin-top: 24px;
   }
 }
 
@@ -205,6 +203,10 @@
 
   .about-me-text .section-title {
     margin-top: 104px;
+  }
+
+  .card-container {
+    margin-top: 52px;
   }
 }
 
