@@ -50,3 +50,18 @@
 .contact-form li:last-child {
   margin-bottom: 0;
 }
+
+/* Footer section */
+.footer-section {
+  margin-top: 17px;
+  margin-bottom: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-section p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #42526e;
+}

@@ -67,9 +67,6 @@
   align-items: center;
   margin: 0 4px;
   border-radius: 4px;
-}
-
-.work-tag span {
   padding: 8px 12px;
   font-weight: 600;
   font-size: 12px;
@@ -152,9 +149,6 @@
   align-items: center;
   margin: 4px;
   border-radius: 8px;
-}
-
-.card-tag span {
   padding: 12px;
   font-weight: 600;
   font-size: 12px;
