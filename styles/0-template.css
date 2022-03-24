@@ -102,6 +102,7 @@ p {
   color: white;
   line-height: 24px;
   letter-spacing: 0.03em;
+  transition: background-color 200ms, box-shadow 500ms;
 }
 
 .button-1:hover {
