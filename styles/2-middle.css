@@ -1,0 +1,232 @@
+/* Middle section (general) */
+main {
+  --grid-min-width: 327px;
+  --grid-max-width: 369px;
+}
+
+.works-section {
+  margin-top: 68px;
+}
+
+.middle-section-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(327px, 369px)); /* Somehow, I can't use var here.
+                                                             So, pay attention to the minmax value of the grid,
+                                                             make sure they are the same with the var */
+  justify-content: center;
+  gap: 24px;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 22px;
+}
+
+.section-sub {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0 12px 24px 12px;
+}
+
+/* Works section */
+.work-container {
+  margin: 62px 24px 0 24px;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  height: 474px;
+  min-width: var(--grid-min-width);
+  max-width: var(--grid-max-width);
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+}
+
+.work-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 222px;
+  border-radius: 8px;
+  margin: auto 1px 1px 1px;
+}
+
+.work-title {
+  display: flex;
+  margin: 16px;
+  text-align: center;
+}
+
+.work-tag {
+  display: flex;
+  justify-content: center;
+}
+
+.work-tag li {
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* About me section */
+.about-me-text-container {
+  display: flex;
+  justify-content: center;
+  background-image:
+    url("../images/backgrounds/illustration\ 1-\ about\ me-mobile.svg"),
+    url("../images/backgrounds/illustration\ 2-about\ me\ mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+}
+
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text > * {
+  margin-bottom: 24px;
+}
+
+.about-me-text > *:last-child {
+  margin-bottom: 0;
+}
+
+.about-me-text .section-title {
+  margin-top: 68px;
+}
+
+.card-container {
+  margin: 59px 24px 0 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--grid-max-width);
+  min-width: var(--grid-min-width);
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border: 1px solid #c1c7d0;
+  border-radius: 8px;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 64px;
+  border-radius: 50%;
+  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
+
+.card-text span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.card-tag {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 8px;
+}
+
+.card-tag li {
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* == Extra items for Mobile version == */
+@media screen and (max-width: 767px) {
+  .small-line {
+    width: 48px;
+    height: 4px;
+    margin-top: 24px;
+  }
+}
+
+/* == Desktop version == */
+@media screen and (min-width: 768px) {
+  .middle-section-grid {
+    /* Somehow, I can't use var here.
+       So, pay attention to the minmax value of the grid,
+       make sure they are the same with the var values used outside */
+    grid-template-columns: repeat(2, minmax(327px, 369px));
+    column-gap: 24px;
+    row-gap: 32px;
+  }
+
+  /* Works section */
+  .works-section {
+    margin-top: 102px;
+  }
+
+  .work-container {
+    margin-top: 52px;
+  }
+
+  /* About me section */
+  .about-me {
+    margin-top: 88px;
+  }
+
+  .about-me-text-container {
+    background-image:
+      url("../images/backgrounds/illustration\ about\ me\ desktop.svg"),
+      url("../images/backgrounds/illustration-about-me-2-desktop.svg");
+    background-position: top right, bottom 26px left;
+  }
+
+  .about-me-text {
+    max-width: 920px;
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+
+  .about-me-text .section-title {
+    margin-top: 104px;
+  }
+
+  .card-container {
+    margin-top: 52px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .middle-section-grid {
+    /* Somehow, I can't use var here.
+       So, pay attention to the minmax value of the grid,
+       make sure they are the same with the var values used outside */
+    grid-template-columns: repeat(3, minmax(327px, 369px));
+    column-gap: 24px;
+    row-gap: 32px;
+  }
+}

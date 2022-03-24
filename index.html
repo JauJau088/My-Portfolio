@@ -13,83 +13,96 @@
       rel="stylesheet"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/template.css" />
-    <link rel="stylesheet" href="styles/header-headline.css" />
-    <link rel="stylesheet" href="styles/middle.css" />
-    <link rel="stylesheet" href="styles/contact.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/0-template.css" />
+    <link rel="stylesheet" href="styles/1-header-headline.css" />
+    <link rel="stylesheet" href="styles/2-middle.css" />
+    <link rel="stylesheet" href="styles/3-contact-footer.css" />
   </head>
   <body>
-    <!-- ********** Header section ********** -->
-    <header>
-      <nav class="nav">
-        <a href="#" class="nav-logo">Welcome</a>
-        <a href="#" class="nav-toggle"
-          ><img src="images/icons/hamburger-menu.svg" alt="Menu"
-        /></a>
-      </nav>
-    </header>
-    <!-- ********** Headline section ********** -->
-    <section class="headline">
-      <div class="headline-primary">
-        <h1>
-          <span class="text-blue">Hey there. I'm Mariane</span>
-          <br />
-          <span class="text-green">I'm a software developer</span>
-        </h1>
-      </div>
-      <div class="headline-sub">
-        <p class="text-blue">
-          I can help you build a product , feature or website Look through some
-          of my work and experience! If you like what you see and have a project
-          you need coded, don't hestiate to contact me.
-        </p>
-      </div>
-      <div>
-        <ul class="headline-socials">
-          <li>
-            <a href="#" class="social-icon"
-              ><img src="images/icons/twitter.svg" alt="Twitter"
+    <!-- Header and headline -->
+    <div class="bg-desktop">
+      <!-- ********** Header section ********** -->
+      <header>
+        <nav class="nav">
+          <div class="nav-mobile">
+            <a href="#" class="nav-logo">Welcome</a>
+            <a href="#" class="nav-toggle"
+              ><img src="images/icons/hamburger-menu.svg" alt="Menu"
             /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/linkedin.svg" alt="LinkedIn"
+          </div>
+          <div class="nav-desktop">
+            <ul>
+              <li><a href="#" class="text-blue-2">Portfolio</a></li>
+              <li><a href="#" class="text-blue-2">About</a></li>
+              <li><a href="#" class="text-blue-2">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- ********** Headline section ********** -->
+      <section class="headline bg-mobile">
+        <div class="headline-container">
+          <div class="headline-primary">
+            <h1>
+              <span class="text-blue">Hey there. I'm Mariane</span>
+              <br />
+              <span class="text-green">I'm a software developer</span>
+            </h1>
+          </div>
+          <div class="headline-sub">
+            <p class="text-blue">
+              I can help you build a product , feature or website Look through some
+              of my work and experience! If you like what you see and have a project
+              you need coded, don't hestiate to contact me.
+            </p>
+          </div>
+          <div>
+            <ul class="headline-socials">
+              <li>
+                <a href="#" class="social-icon"
+                  ><img src="images/icons/twitter.svg" alt="Twitter"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="social-icon">
+                  <img src="images/icons/linkedin.svg" alt="LinkedIn"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="social-icon">
+                  <img src="images/icons/medium.svg" alt="Medium"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="social-icon">
+                  <img src="images/icons/github.svg" alt="GitHub"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="social-icon">
+                  <img src="images/icons/angellist.svg" alt="AngelList"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="headline-action">
+            <a href="#" class="headline-down-arrow"
+              ><img src="images/icons/down-arrow.svg" alt="down-arrow"
             /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/medium.svg" alt="Medium"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/github.svg" alt="GitHub"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/angellist.svg" alt="AngelList"
-            /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="headline-action">
-        <a href="#" class="headline-down-arrow"
-          ><img src="images/icons/down-arrow.svg" alt="down-arrow"
-        /></a>
-      </div>
-    </section>
-    <!-- ********** Middle section ********** -->
-    <section class="middle-section">
-      <!-- ***** Middle section: Works section ***** -->
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Main body -->
+    <main>
+      <!-- ********** Works section ********** -->
       <section class="works-section">
         <div class="section-title">
           <h2 class="text-blue">My Recent Works</h2>
           <div class="small-line green"></div>
         </div>
         <!-- Work container -->
-        <ul class="work-container">
+        <ul class="work-container middle-section-grid">
           <!-- Work 1 -->
           <li class="work grey">
             <div class="work-image">
@@ -101,14 +114,10 @@
                 <h4 class="text-green-dark">Multi-Post Stories Gain+Glory</h4>
               </div>
               <ul class="work-tag">
-                <li class="grey">
-                  <span class="text-green-dark">Ruby on Rails</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">css</span></li>
-                <li class="grey">
-                  <span class="text-green-dark">JavaScript</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">html</span></li>
+                <li class="grey text-green-dark">Ruby on Rails</li>
+                <li class="grey text-green-dark">css</li>
+                <li class="grey text-green-dark">JavaScript</li>
+                <li class="grey text-green-dark">html</li>
               </ul>
               <button type="button" class="button-1">See Project</button>
             </div>
@@ -124,14 +133,10 @@
                 <h4 class="text-green-dark">Multi-Post Stories Gain+Glory</h4>
               </div>
               <ul class="work-tag">
-                <li class="grey">
-                  <span class="text-green-dark">Ruby on Rails</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">css</span></li>
-                <li class="grey">
-                  <span class="text-green-dark">JavaScript</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">html</span></li>
+                <li class="grey text-green-dark">Ruby on Rails</li>
+                <li class="grey text-green-dark">css</li>
+                <li class="grey text-green-dark">JavaScript</li>
+                <li class="grey text-green-dark">html</li>
               </ul>
               <button type="button" class="button-1">See Project</button>
             </div>
@@ -147,14 +152,10 @@
                 <h4 class="text-green-dark">Multi-Post Stories Gain+Glory</h4>
               </div>
               <ul class="work-tag">
-                <li class="grey">
-                  <span class="text-green-dark">Ruby on Rails</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">css</span></li>
-                <li class="grey">
-                  <span class="text-green-dark">JavaScript</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">html</span></li>
+                <li class="grey text-green-dark">Ruby on Rails</li>
+                <li class="grey text-green-dark">css</li>
+                <li class="grey text-green-dark">JavaScript</li>
+                <li class="grey text-green-dark">html</li>
               </ul>
               <button type="button" class="button-1">See Project</button>
             </div>
@@ -170,14 +171,10 @@
                 <h4 class="text-green-dark">Multi-Post Stories Gain+Glory</h4>
               </div>
               <ul class="work-tag">
-                <li class="grey">
-                  <span class="text-green-dark">Ruby on Rails</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">css</span></li>
-                <li class="grey">
-                  <span class="text-green-dark">JavaScript</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">html</span></li>
+                <li class="grey text-green-dark">Ruby on Rails</li>
+                <li class="grey text-green-dark">css</li>
+                <li class="grey text-green-dark">JavaScript</li>
+                <li class="grey text-green-dark">html</li>
               </ul>
               <button type="button" class="button-1">See Project</button>
             </div>
@@ -193,14 +190,10 @@
                 <h4 class="text-green-dark">Multi-Post Stories Gain+Glory</h4>
               </div>
               <ul class="work-tag">
-                <li class="grey">
-                  <span class="text-green-dark">Ruby on Rails</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">css</span></li>
-                <li class="grey">
-                  <span class="text-green-dark">JavaScript</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">html</span></li>
+                <li class="grey text-green-dark">Ruby on Rails</li>
+                <li class="grey text-green-dark">css</li>
+                <li class="grey text-green-dark">JavaScript</li>
+                <li class="grey text-green-dark">html</li>
               </ul>
               <button type="button" class="button-1">See Project</button>
             </div>
@@ -216,38 +209,36 @@
                 <h4 class="text-green-dark">Multi-Post Stories Gain+Glory</h4>
               </div>
               <ul class="work-tag">
-                <li class="grey">
-                  <span class="text-green-dark">Ruby on Rails</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">css</span></li>
-                <li class="grey">
-                  <span class="text-green-dark">JavaScript</span>
-                </li>
-                <li class="grey"><span class="text-green-dark">html</span></li>
+                <li class="grey text-green-dark">Ruby on Rails</li>
+                <li class="grey text-green-dark">css</li>
+                <li class="grey text-green-dark">JavaScript</li>
+                <li class="grey text-green-dark">html</li>
               </ul>
               <button type="button" class="button-1">See Project</button>
             </div>
           </li>
         </ul>
       </section>
-      <!-- ***** Middle section: About me section ***** -->
+      <!-- ********** About me section ********** -->
       <section class="about-me">
         <!-- About me text -->
-        <div class="about-me-text">
-          <div class="section-title">
-            <h2 class="text-blue">About me</h2>
+        <div class="about-me-text-container">
+          <div class="about-me-text">
+            <div class="section-title">
+              <h2 class="text-blue">About me</h2>
+            </div>
+            <div class="section-sub">
+              <p class="text-blue-3">
+                I can help you build a product , feature or website Look through
+                some of my work and experience! If you like what you see and have a
+                project you need coded, don't hestiate to contact me.
+              </p>
+            </div>
+            <button type="button" class="button-1">Get My Resume</button>
           </div>
-          <div class="section-sub">
-            <p class="text-blue-3">
-              I can help you build a product , feature or website Look through
-              some of my work and experience! If you like what you see and have
-              a project you need coded, don't hestiate to contact me.
-            </p>
-          </div>
-          <button type="button" class="button-1">Get My Resume</button>
         </div>
         <!-- Card container -->
-        <ul class="card-container">
+        <ul class="card-container middle-section-grid">
           <!-- Card 1 -->
           <li class="card grey">
             <div class="card-icon white">
@@ -257,18 +248,10 @@
               <span class="text-blue-2">Languages</span>
             </div>
             <ul class="card-tag">
-              <li class="white">
-                <span class="text-green">JavaScript</span>
-              </li>
-              <li class="white">
-                <span class="text-green">Ruby</span>
-              </li>
-              <li class="white">
-                <span class="text-green">html</span>
-              </li>
-              <li class="white">
-                <span class="text-green">css</span>
-              </li>
+              <li class="white text-green">JavaScript</li>
+              <li class="white text-green">Ruby</li>
+              <li class="white text-green">html</li>
+              <li class="white text-green">css</li>
             </ul>
           </li>
           <!-- Card 2 -->
@@ -280,21 +263,11 @@
               <span class="text-blue-2">Frameworks</span>
             </div>
             <ul class="card-tag">
-              <li class="white">
-                <span class="text-green">Bootstrap</span>
-              </li>
-              <li class="white">
-                <span class="text-green">Ruby on Rails</span>
-              </li>
-              <li class="white">
-                <span class="text-green">RSpec</span>
-              </li>
-              <li class="white">
-                <span class="text-green">Capybara</span>
-              </li>
-              <li class="white">
-                <span class="text-green">Selenium</span>
-              </li>
+              <li class="white text-green">Bootstrap</li>
+              <li class="white text-green">Ruby on Rails</li>
+              <li class="white text-green">RSpec</li>
+              <li class="white text-green">Capybara</li>
+              <li class="white text-green">Selenium</li>
             </ul>
           </li>
           <!-- Card 3 -->
@@ -306,82 +279,92 @@
               <span class="text-blue-2">Skills</span>
             </div>
             <ul class="card-tag">
-              <li class="white">
-                <span class="text-green">Codekit</span>
-              </li>
-              <li class="white">
-                <span class="text-green">GitHub</span>
-              </li>
-              <li class="white">
-                <span class="text-green">Codepen</span>
-              </li>
-              <li class="white">
-                <span class="text-green">Gitlab</span>
-              </li>
-              <li class="white">
-                <span class="text-green">Terminal</span>
-              </li>
+              <li class="white text-green">Codekit</li>
+              <li class="white text-green">GitHub</li>
+              <li class="white text-green">Codepen</li>
+              <li class="white text-green">Gitlab</li>
+              <li class="white text-green">Terminal</li>
             </ul>
           </li>
         </ul>
       </section>
-    </section>
-    <!-- ********** Contact section ********** -->
-    <section class="contact-section">
-      <div class="contact-description">
-        <h2 class="text-blue">
-          I'm always interested in hearing about new projects, so if you'd like
-          to chat please get in touch.
-        </h2>
-      </div>
-      <div>
-        <form action="https://formspree.io/f/xoqrlzpz" method="post">
-          <ul class="contact-form">
+      <!-- ********** Contact section ********** -->
+      <section class="contact-section contact-bg-mobile">
+        <div class="contact-bg-desktop">
+          <div class="contact-container">
+            <div>
+              <h2 class="text-blue">
+                I'm always interested in hearing about new projects, so if you'd like
+                to chat please get in touch.
+              </h2>
+            </div>
+            <div>
+              <form action="https://formspree.io/f/xoqrlzpz" method="post">
+                <ul class="contact-form">
+                  <li>
+                    <input
+                      type="text"
+                      placeholder="Full name"
+                      name="full-name"
+                      maxlength="30"
+                      required
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="email"
+                      placeholder="Email address"
+                      name="email"
+                      required
+                    />
+                  </li>
+                  <li>
+                    <textarea
+                      placeholder="Enter text here"
+                      name="message"
+                      maxlength="500"
+                      required
+                    ></textarea>
+                  </li>
+                  <li>
+                    <button type="submit" class="button-1">Get in touch</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="contact-socials-container">
+          <ul class="headline-socials">
             <li>
-              <input type="text" placeholder="Full name" name="full-name" maxlength="30" required/>
+              <a href="#" class="social-icon"
+                ><img src="images/icons/twitter.svg" alt="Twitter"
+              /></a>
             </li>
             <li>
-              <input type="email" placeholder="Email address" name="email" required/>
+              <a href="#" class="social-icon">
+                <img src="images/icons/linkedin.svg" alt="LinkedIn"
+              /></a>
             </li>
             <li>
-              <textarea placeholder="Enter text here" name="message" maxlength="500" required></textarea>
+              <a href="#" class="social-icon">
+                <img src="images/icons/medium.svg" alt="Medium"
+              /></a>
             </li>
             <li>
-              <button type="submit" class="button-1">Get in touch</button>
+              <a href="#" class="social-icon">
+                <img src="images/icons/github.svg" alt="GitHub"
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="social-icon">
+                <img src="images/icons/angellist.svg" alt="AngelList"
+              /></a>
             </li>
           </ul>
-        </form>
-      </div>
-      <div>
-        <ul class="headline-socials">
-          <li>
-            <a href="#" class="social-icon"
-              ><img src="images/icons/twitter.svg" alt="Twitter"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/linkedin.svg" alt="LinkedIn"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/medium.svg" alt="Medium"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/github.svg" alt="GitHub"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="social-icon">
-              <img src="images/icons/angellist.svg" alt="AngelList"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
     <!-- ********** Footer section ********** -->
     <footer class="footer-section">
       <div>

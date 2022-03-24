@@ -1,0 +1,149 @@
+/* Header section */
+.nav-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+}
+
+.nav-logo {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+/* Headline section */
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 68px 24px 0 24px;
+}
+
+.headline-container > * {
+  margin-bottom: 58px;
+}
+
+.headline-container > *:last-child {
+  margin-bottom: 0;
+}
+
+.headline-sub {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.headline-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  width: 170px;
+  margin: 0;
+}
+
+.headline-action {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
+.headline-down-arrow {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #dfe1e6;
+  border-radius: 50%;
+}
+
+.headline-down-arrow img {
+  width: 12px;
+}
+
+/* == Extra items for Mobile version == */
+@media screen and (max-width: 767px) {
+  .bg-mobile {
+    background-image: url("../images/backgrounds/header-illsutration-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* == Desktop version == */
+@media screen and (min-width: 768px) {
+  /* Header section */
+  .bg-desktop {
+    background-image: url("../images/backgrounds/Header-llustration-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .nav {
+    display: flex;
+    height: 72px;
+    justify-content: center;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
+  }
+
+  .nav-desktop ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-desktop li {
+    width: fit-content;
+  }
+
+  .nav-desktop a {
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .nav-desktop a:hover {
+    cursor: pointer;
+  }
+
+  /* Headline section */
+  .headline-container {
+    max-width: 920px;
+    margin-bottom: 390px;
+    padding-top: 160px;
+  }
+
+  .headline-container > * {
+    margin-bottom: 24px;
+  }
+
+  .headline-sub {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
