@@ -1,8 +1,11 @@
 /* == Mobile version == */
 /* Middle section (general) */
-.works-section {
+main {
   --grid-min-width: 327px;
   --grid-max-width: 369px;
+}
+
+.works-section {
   margin-top: 68px;
 }
 
@@ -111,6 +114,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: var(--grid-max-width);
+  min-width: var(--grid-min-width);
   padding-top: 40px;
   padding-bottom: 20px;
   border: 1px solid #c1c7d0;
@@ -210,7 +215,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   .middle-section-grid {
     /* Somehow, I can't use var declared outside of here, including root var.
        So, pay attention to the minmax value of the grid,
