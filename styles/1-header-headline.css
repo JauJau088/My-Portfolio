@@ -65,8 +65,19 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  background-color: white;
   border: 1px solid #dfe1e6;
   border-radius: 50%;
+  transition: background-color 500ms;
+}
+
+.headline-down-arrow:hover {
+  background-color: #36b37f;
+  border: none;
+}
+
+.headline-down-arrow:active {
+  background-color: #008552;
 }
 
 .headline-down-arrow img {
