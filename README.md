@@ -10,6 +10,11 @@
 - CSS
 
 
+## Live Demo
+
+:fire: https://jaujau088.github.io/My-Portfolio/ :fire:
+
+
 ## Getting Started
 
 You can have a copy of this repo run on your local machine by just directly cloning it. However, you need to follow these simple steps to make sure you have the same linters set up.
