@@ -65,15 +65,24 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: white;
   border: 1px solid #dfe1e6;
   border-radius: 50%;
-  transition: background-color 500ms;
+  transition: background-color 500ms, border 500ms;
 }
 
 .headline-down-arrow:hover {
   background-color: #36b37f;
-  border: none;
+  border: 1px solid white;
+}
+
+.headline-down-arrow:hover .svg-down-arrow {
+  fill: #fff;
+}
+
+svg path {
+  transition: fill 300ms ease-out;
 }
 
 .headline-down-arrow:active {
