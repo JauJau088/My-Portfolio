@@ -92,7 +92,7 @@ p {
 
 /* Buttons */
 .button-1 {
-  background-color: #1E488F;
+  background-color: #1e488f;
   margin-top: auto;
   margin-bottom: 24px;
   padding: 12px;
@@ -112,7 +112,7 @@ p {
 }
 
 .button-1:active {
-  background: #0A2759;
+  background: #0a2759;
 }
 
 /* Forms */
