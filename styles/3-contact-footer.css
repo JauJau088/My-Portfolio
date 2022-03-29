@@ -47,8 +47,9 @@
   height: 114px;
   width: 100%;
   min-width: 327px;
+  max-width: 100%;
   padding: 12px;
-  border: 1px solid #60c095;
+  border: 1px solid #1e488f;
   border-radius: 4px;
 }
 
@@ -153,6 +154,7 @@
   }
 }
 
+/* == Screen reader == */
 @media reader {
   .reader-only {
     display: block;
