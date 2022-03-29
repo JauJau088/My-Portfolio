@@ -69,6 +69,10 @@
   justify-content: center;
 }
 
+.reader-only {
+  display: none;
+}
+
 /* Footer section */
 .footer-section {
   margin-top: 17px;
@@ -146,5 +150,11 @@
   /* Footer section */
   .footer-section {
     display: none;
+  }
+}
+
+@media reader {
+  .reader-only {
+    display: block;
   }
 }
