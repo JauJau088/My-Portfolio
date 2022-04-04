@@ -26,9 +26,18 @@
         <nav class="nav">
           <div class="nav-mobile">
             <a href="#" class="nav-logo">Welcome</a>
-            <a href="#" class="nav-toggle"
+            <a href="#" class="nav-toggle" id="menu-hamburger-button"
               ><img src="images/icons/hamburger-menu.svg" alt="Menu"
             /></a>
+          </div>
+          <div class="nav-mobile-menu hide" id="mobile-menu-container">
+            <a href="#" id="menu-close-button">
+              <img src="images/icons/close-button.svg" alt="close-button"></a>
+            <ul>
+              <li><a href="#" class="text-blue-2">Portfolio</a></li>
+              <li><a href="#" class="text-blue-2">About</a></li>
+              <li><a href="#" class="text-blue-2">Contact</a></li>
+            </ul>
           </div>
           <div class="nav-desktop">
             <ul>
@@ -393,5 +402,7 @@
         <p>myemailhere@email.com</p>
       </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
   </body>
 </html>
