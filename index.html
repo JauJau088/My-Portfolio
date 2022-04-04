@@ -26,15 +26,27 @@
         <nav class="nav">
           <div class="nav-mobile">
             <a href="#" class="nav-logo">Welcome</a>
-            <a href="#" class="nav-toggle"
+            <a id="button-mobile-hamburger" class="nav-toggle"
               ><img src="images/icons/hamburger-menu.svg" alt="Menu"
             /></a>
           </div>
+          <div id="mobile-menu-container" class="nav-mobile-menu hide">
+            <div class="menu-close-container">
+              <a id="button-mobile-close" class="menu-close">
+                <img src="images/icons/close-button.svg" alt="close-button">
+              </a>
+            </div>
+            <ul>
+              <li class="text-green-dark"><a href="#works" id="button-mobile-portfolio">Portfolio</a></li>
+              <li class="text-green-dark"><a href="#about-me" id="button-mobile-about">About</a></li>
+              <li class="text-green-dark"><a href="#contact-me" id="button-mobile-contact">Contact</a></li>
+            </ul>
+          </div>
           <div class="nav-desktop">
             <ul>
-              <li><a href="#" class="text-blue-2">Portfolio</a></li>
-              <li><a href="#" class="text-blue-2">About</a></li>
-              <li><a href="#" class="text-blue-2">Contact</a></li>
+              <li class="text-blue-2"><a href="#works">Portfolio</a></li>
+              <li class="text-blue-2"><a href="#about-me">About</a></li>
+              <li class="text-blue-2"><a href="#contact-me">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -112,7 +124,7 @@
     <!-- Main body -->
     <main>
       <!-- ********** Works section ********** -->
-      <section class="works-section">
+      <section id="works" class="works-section">
         <div class="section-title">
           <h2 class="text-blue">My Recent Works</h2>
           <div class="small-line green"></div>
@@ -236,7 +248,7 @@
         </ul>
       </section>
       <!-- ********** About me section ********** -->
-      <section class="about-me">
+      <section id="about-me" class="about-me">
         <!-- About me text -->
         <div class="about-me-text-container">
           <div class="about-me-text">
@@ -305,7 +317,7 @@
         </ul>
       </section>
       <!-- ********** Contact section ********** -->
-      <section class="contact-section contact-bg-mobile">
+      <section id="contact-me" class="contact-section contact-bg-mobile">
         <div class="contact-bg-desktop">
           <div class="contact-container">
             <div>
@@ -393,5 +405,7 @@
         <p>myemailhere@email.com</p>
       </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
   </body>
 </html>
