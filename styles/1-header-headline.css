@@ -26,11 +26,13 @@
 .hide {
   opacity: 0;
   pointer-events: none;
+  transition: opacity 200ms ease;
 }
 
 .show {
   opacity: 1;
   pointer-events: auto;
+  transition: opacity 400ms ease;
 }
 
 .nav-mobile-menu {
