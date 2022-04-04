@@ -1,5 +1,5 @@
-const open = document.getElementById('menu-hamburger-button');
-const close = document.getElementById('menu-close-button');
+const open = document.getElementById('button-mobile-hamburger');
+const close = document.getElementById('button-mobile-close');
 const container = document.getElementById('mobile-menu-container');
 
 open.addEventListener('click', () => {

@@ -1,4 +1,8 @@
 /* Header section */
+.nav {
+  height: 48px;
+}
+
 .nav-mobile {
   display: flex;
   justify-content: space-between;
@@ -14,6 +18,11 @@
   font-size: 24px;
 }
 
+.nav-toggle,
+.menu-close {
+  cursor: pointer;
+}
+
 .hide {
   opacity: 0;
   pointer-events: none;
@@ -25,12 +34,30 @@
 }
 
 .nav-mobile-menu {
-  padding-top:12px ;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 12px 21px 0 28px;
+  background-color: white;
 }
 
-.close-menu-container {
-  margin-left: 330px;
-  margin-top: 100px;
+.nav-mobile-menu ul {
+  margin: 0;
+  padding-top: 34px;
+}
+
+.nav-mobile-menu li {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  padding-bottom: 40px;
+}
+
+.menu-close-container {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .nav-desktop {
