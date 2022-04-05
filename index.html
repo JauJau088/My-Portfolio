@@ -33,13 +33,19 @@
           <div id="mobile-menu-container" class="nav-mobile-menu hide">
             <div class="menu-close-container">
               <a id="button-mobile-close" class="menu-close">
-                <img src="images/icons/close-button.svg" alt="close-button">
+                <img src="images/icons/close-button.svg" alt="close-button" />
               </a>
             </div>
             <ul>
-              <li class="text-green-dark"><a href="#works" id="button-mobile-portfolio">Portfolio</a></li>
-              <li class="text-green-dark"><a href="#about-me" id="button-mobile-about">About</a></li>
-              <li class="text-green-dark"><a href="#contact-me" id="button-mobile-contact">Contact</a></li>
+              <li class="text-green-dark">
+                <a href="#works" id="button-mobile-portfolio">Portfolio</a>
+              </li>
+              <li class="text-green-dark">
+                <a href="#about-me" id="button-mobile-about">About</a>
+              </li>
+              <li class="text-green-dark">
+                <a href="#contact-me" id="button-mobile-contact">Contact</a>
+              </li>
             </ul>
           </div>
           <div class="nav-desktop">
@@ -246,6 +252,41 @@
             </div>
           </li>
         </ul>
+        <!-- Work pop-up -->
+        <div class="work-popup-container">
+          <div class="work-popup-bg">
+            <a class="work-popup-close">
+              <img
+                src="images/icons/cancel-button-mobile.svg"
+                alt="cancel-button"
+              />
+            </a>
+            <div class="work-popup-content-container">
+              <img src="images/backgrounds/snapshoot-portfolio.svg" alt="work thumbnail" />
+              <h3 class="text-blue font-600-32-44">
+                Keeping track of hundreds of components
+              </h3>
+              <ul class="work-tag">
+                <li class="grey text-green-dark">Ruby on Rails</li>
+                <li class="grey text-green-dark">css</li>
+                <li class="grey text-green-dark">JavaScript</li>
+              </ul>
+              <p class="text-blue-2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea
+              </p>
+              <div class="work-popup-buttons">
+                <button href="" class="button-1">
+                  <span>See Live</span>
+                  <img src="images/icons/see-live.svg" alt="see-live-icon">
+                </button>
+                <button type="button" class="button-1">
+                  <span>See Source</span>
+                  <img src="images/icons/github-white.svg" alt="see-source-icon">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- ********** About me section ********** -->
       <section id="about-me" class="about-me">
@@ -330,7 +371,9 @@
               <form action="https://formspree.io/f/xoqrlzpz" method="post">
                 <ul class="contact-form">
                   <li>
-                    <label for="form-name" class="reader-only">Full Name: </label>
+                    <label for="form-name" class="reader-only"
+                      >Full Name:
+                    </label>
                     <input
                       id="form-name"
                       type="text"
@@ -351,7 +394,9 @@
                     />
                   </li>
                   <li>
-                    <label for="form-message" class="reader-only">Message: </label>
+                    <label for="form-message" class="reader-only"
+                      >Message:
+                    </label>
                     <textarea
                       id="form-message"
                       placeholder="Enter text here"
