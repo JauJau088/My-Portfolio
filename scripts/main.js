@@ -28,3 +28,8 @@ menuPortfolio.addEventListener('click', () => hide(container));
 menuAbout.addEventListener('click', () => hide(container));
 menuContact.addEventListener('click', () => hide(container));
 
+const seeProjectButtons = document.querySelectorAll('work-show-button');
+const buttonIndex = 0;
+seeProjectButtons.forEach((button) => {
+  button.addEventListener('click', () => showWorkPopup(indexOf(button));
+ });
