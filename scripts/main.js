@@ -27,3 +27,4 @@ const menuContact = document.getElementById('button-mobile-contact');
 menuPortfolio.addEventListener('click', () => hide(container));
 menuAbout.addEventListener('click', () => hide(container));
 menuContact.addEventListener('click', () => hide(container));
+
