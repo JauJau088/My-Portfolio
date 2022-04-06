@@ -10,10 +10,7 @@ main {
 
 .middle-section-grid {
   display: grid;
-  grid-template-columns: repeat(
-    1,
-    minmax(327px, 369px)
-  ); /* Somehow, I can't use var here.
+  grid-template-columns: repeat(1, minmax(327px, 369px)); /* Somehow, I can't use var here.
                                                              So, pay attention to the minmax value of the grid,
                                                              make sure they are the same with the var */
   justify-content: center;
@@ -69,6 +66,7 @@ main {
 .work-tag {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .work-tag li {
@@ -147,7 +145,8 @@ main {
 .about-me-text-container {
   display: flex;
   justify-content: center;
-  background-image: url("../images/backgrounds/illustration\ 1-\ about\ me-mobile.svg"),
+  background-image:
+    url("../images/backgrounds/illustration\ 1-\ about\ me-mobile.svg"),
     url("../images/backgrounds/illustration\ 2-about\ me\ mobile.svg");
   background-repeat: no-repeat;
   background-position: top right, bottom left;
@@ -303,7 +302,8 @@ main {
   }
 
   .about-me-text-container {
-    background-image: url("../images/backgrounds/illustration\ about\ me\ desktop.svg"),
+    background-image:
+      url("../images/backgrounds/illustration\ about\ me\ desktop.svg"),
       url("../images/backgrounds/illustration-about-me-2-desktop.svg");
     background-position: top right, bottom 26px left;
   }

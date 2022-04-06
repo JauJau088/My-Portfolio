@@ -150,7 +150,7 @@ close.forEach((closeBtn) => {
   const closeContainer = closeBtn.closest('.js-container');
 
   closeBtn.addEventListener('click', () => hide(closeContainer));
-})
+});
 
 // ==== Mobile nav
 const container = document.getElementById('mobile-menu-container');
