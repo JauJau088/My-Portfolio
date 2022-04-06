@@ -258,6 +258,7 @@ main {
 
   /* Works popup */
   .work-popup-bg {
+    width: 100%;
     max-width: 920px;
   }
 
