@@ -82,22 +82,189 @@ function hide(toHide) {
 // ==== Show work popup function
 const showWorkPopup = (index) => {
   // Define the targets
+  const main = document.querySelector('main');
   let workPopup;
+  let workPopupBg;
+  let workPopupClose;
+  let closeImg;
+  let workPopupContentContainer;
+  let workPopupTitle;
+  let workPopupImg;
+  let workPopupTag;
+  let workPopupDesc;
+  let workPopupBut;
+  let seeLiveBtn;
+  let seeLiveBtnSpan;
+  let seeLiveBtnImg;
+  let seeSrcBtn;
+  let seeSrcBtnSpan;
+  let seeSrcBtnImg;
+  let workPopupCloseCntr;
+  let workPopupTitleBut;
 
   if (window.innerWidth < 768) {
     // If mobile
-    workPopup = document.querySelector('#wpc-mobile'); // !! Don't forget to add #wpc-mobile in html
+    // 1
+    workPopup = document.createElement('div');
+    workPopup.classList.add('js-container', 'work-popup-container', 'hide');
+    main.appendChild(workPopup);
+    // 1.1
+    workPopupBg = document.createElement('div');
+    workPopupBg.classList.add('work-popup-bg');
+    workPopup.appendChild(workPopupBg);
+    // 1.1.1
+    workPopupClose = document.createElement('a');
+    workPopupClose.classList.add('work-popup-close', 'close-button');
+    workPopupBg.appendChild(workPopupClose);
+    // 1.1.1.1
+    closeImg = document.createElement('img');
+    closeImg.setAttribute('src', 'images/icons/cancel-button-mobile.svg');
+    closeImg.setAttribute('alt', 'cancel-button');
+    workPopupClose.appendChild(closeImg);
+    // 1.1.2
+    workPopupContentContainer = document.createElement('div');
+    workPopupContentContainer.classList.add('work-popup-content-container');
+    workPopupBg.appendChild(workPopupContentContainer);
+    // 1.1.2.1
+    workPopupImg = document.createElement('img');
+    workPopupImg.classList.add('work-popup-img');
+    workPopupImg.setAttribute('src', '');
+    workPopupImg.setAttribute('alt', 'project thumbnail');
+    workPopupContentContainer.appendChild(workPopupImg);
+    // 1.1.2.2
+    workPopupTitle = document.createElement('h3');
+    workPopupTitle.classList.add('text-blue', 'font-600-32-44');
+    workPopupContentContainer.appendChild(workPopupTitle);
+    // 1.1.2.3
+    workPopupTag = document.createElement('ul');
+    workPopupTag.classList.add('work-tag', 'work-tag-popup');
+    workPopupContentContainer.appendChild(workPopupTag);
+    // 1.1.2.4
+    workPopupDesc = document.createElement('p');
+    workPopupDesc.classList.add('text-blue-2');
+    workPopupContentContainer.appendChild(workPopupDesc);
+    // 1.1.2.5
+    workPopupBut = document.createElement('div');
+    workPopupBut.classList.add('work-popup-buttons');
+    workPopupContentContainer.appendChild(workPopupBut);
+    // 1.1.2.5.1
+    seeLiveBtn = document.createElement('button');
+    seeLiveBtn.classList.add('button-1', 'project-live');
+    seeLiveBtn.setAttribute('type', 'button');
+    workPopupBut.appendChild(seeLiveBtn);
+    // 1.1.2.5.1.1
+    seeLiveBtnSpan = document.createElement('span');
+    seeLiveBtnSpan.textContent = 'See Live';
+    seeLiveBtn.appendChild(seeLiveBtnSpan);
+    // 1.1.2.5.1.2
+    seeLiveBtnImg = document.createElement('img');
+    seeLiveBtnImg.setAttribute('src', 'images/icons/see-live.svg');
+    seeLiveBtnImg.setAttribute('alt', 'see-live-icon');
+    seeLiveBtn.appendChild(seeLiveBtnImg);
+    // 1.1.2.5.2
+    seeSrcBtn = document.createElement('button');
+    seeSrcBtn.classList.add('button-1', 'project-live');
+    seeSrcBtn.setAttribute('type', 'button');
+    workPopupBut.appendChild(seeSrcBtn);
+    // 1.1.2.5.2.1
+    seeSrcBtnSpan = document.createElement('span');
+    seeSrcBtnSpan.textContent = 'See Source';
+    seeSrcBtn.appendChild(seeSrcBtnSpan);
+    // 1.1.2.5.2.2
+    seeSrcBtnImg = document.createElement('img');
+    seeSrcBtnImg.setAttribute('src', 'images/icons/github-white.svg');
+    seeSrcBtnImg.setAttribute('alt', 'see-live-icon');
+    seeSrcBtn.appendChild(seeSrcBtnImg);
   } else {
     // If desktop
-    workPopup = document.querySelector('#wpc-desktop'); // !! Don't forget to add #wpc-desktop in html
+    // 1
+    workPopup = document.createElement('div');
+    workPopup.classList.add('js-container', 'work-popup-container', 'hide');
+    main.appendChild(workPopup);
+    // 1.1
+    workPopupBg = document.createElement('div');
+    workPopupBg.classList.add('work-popup-bg');
+    workPopup.appendChild(workPopupBg);
+    // 1.1.1
+    workPopupContentContainer = document.createElement('div');
+    workPopupContentContainer.classList.add('work-popup-content-container');
+    workPopupBg.appendChild(workPopupContentContainer);
+    // 1.1.1.1
+    workPopupCloseCntr = document.createElement('div');
+    workPopupCloseCntr.classList.add('work-popup-close-container');
+    workPopupContentContainer.appendChild(workPopupCloseCntr);
+    // 1.1.1.1.1
+    workPopupClose = document.createElement('a');
+    workPopupClose.classList.add('work-popup-close', 'close-button');
+    workPopupCloseCntr.appendChild(workPopupClose);
+    // 1.1.1.1.1.1
+    closeImg = document.createElement('img');
+    closeImg.setAttribute('src', 'images/icons/cancel-button-desktop.svg');
+    closeImg.setAttribute('alt', 'cancel-button');
+    workPopupClose.appendChild(closeImg);
+    // 1.1.1.2
+    workPopupImg = document.createElement('img');
+    workPopupImg.classList.add('work-popup-img');
+    workPopupImg.setAttribute('src', '');
+    workPopupImg.setAttribute('alt', 'project thumbnail');
+    workPopupContentContainer.appendChild(workPopupImg);
+    // 1.1.1.3
+    workPopupTitleBut = document.createElement('div');
+    workPopupTitleBut.classList.add('work-popup-title_buttons');
+    workPopupContentContainer.appendChild(workPopupTitleBut);
+    // 1.1.1.3.1
+    workPopupTitle = document.createElement('h3');
+    workPopupTitle.classList.add('text-blue', 'font-700-32-44');
+    workPopupTitleBut.appendChild(workPopupTitle);
+    // 1.1.1.3.2
+    workPopupBut = document.createElement('div');
+    workPopupBut.classList.add('work-popup-buttons');
+    workPopupTitleBut.appendChild(workPopupBut);
+    // 1.1.1.3.2.1
+    seeLiveBtn = document.createElement('button');
+    seeLiveBtn.classList.add('button-1', 'project-live');
+    seeLiveBtn.setAttribute('type', 'button');
+    workPopupBut.appendChild(seeLiveBtn);
+    // 1.1.1.3.2.1.1
+    seeLiveBtnSpan = document.createElement('span');
+    seeLiveBtnSpan.textContent = 'See Live';
+    seeLiveBtn.appendChild(seeLiveBtnSpan);
+    // 1.1.1.3.2.1.2
+    seeLiveBtnImg = document.createElement('img');
+    seeLiveBtnImg.setAttribute('src', 'images/icons/see-live.svg');
+    seeLiveBtnImg.setAttribute('alt', 'see-live-icon');
+    seeLiveBtn.appendChild(seeLiveBtnImg);
+    // 1.1.1.3.2.2
+    seeSrcBtn = document.createElement('button');
+    seeSrcBtn.classList.add('button-1', 'project-live');
+    seeSrcBtn.setAttribute('type', 'button');
+    workPopupBut.appendChild(seeSrcBtn);
+    // 1.1.1.3.2.2.1
+    seeSrcBtnSpan = document.createElement('span');
+    seeSrcBtnSpan.textContent = 'See Source';
+    seeSrcBtn.appendChild(seeSrcBtnSpan);
+    // 1.1.1.3.2.2.2
+    seeSrcBtnImg = document.createElement('img');
+    seeSrcBtnImg.setAttribute('src', 'images/icons/github-white.svg');
+    seeSrcBtnImg.setAttribute('alt', 'see-live-icon');
+    seeSrcBtn.appendChild(seeSrcBtnImg);
+    // 1.1.1.4
+    workPopupTag = document.createElement('ul');
+    workPopupTag.classList.add('work-tag', 'work-tag-popup');
+    workPopupContentContainer.appendChild(workPopupTag);
+    // 1.1.1.5
+    workPopupDesc = document.createElement('p');
+    workPopupDesc.classList.add('text-blue-2');
+    workPopupContentContainer.appendChild(workPopupDesc);
   }
 
-  const img = workPopup.querySelector('.work-popup-img'); // !! Don't forget to add .work-popup-img in html
-  const title = workPopup.querySelector('h3');
-  const tags = workPopup.querySelector('.work-tag-popup');
-  const desc = workPopup.querySelector('p');
-  const live = workPopup.querySelector('.project-live'); // !! Don't forget to add .project-live in html
-  const source = workPopup.querySelector('.project-source'); // !! Don't forget to add .project-source in html
+  // Targets
+  const img = workPopupImg;
+  const title = workPopupTitle;
+  const tags = workPopupTag;
+  const desc = workPopupDesc;
+  const live = seeLiveBtn;
+  const source = seeSrcBtn;
 
   // Generate contents to the targets
   // Make distiction for mobile and desktop
@@ -135,28 +302,23 @@ const showWorkPopup = (index) => {
     tags.appendChild(el);
   });
 
+  // Add close function
+  workPopupClose.addEventListener('click', () => {
+    hide(workPopup);
+    main.removeChild(workPopup);
+  });
+
   // Show
-  if (window.innerWidth < 768) {
-    show(workPopup);
-  } else {
-    show(workPopup);
-  }
+  show(workPopup);
 };
-
-// ==== Generic close function for x buttons
-const close = document.querySelectorAll('.close-button');
-
-close.forEach((closeBtn) => {
-  const closeContainer = closeBtn.closest('.js-container');
-
-  closeBtn.addEventListener('click', () => hide(closeContainer));
-});
 
 // ==== Mobile nav
 const container = document.getElementById('mobile-menu-container');
 const open = document.getElementById('button-mobile-hamburger');
+const close = document.getElementById('button-mobile-close');
 
 open.addEventListener('click', () => show(container));
+close.addEventListener('click', () => hide(container));
 
 // Mobile nav menu
 const menuPortfolio = document.getElementById('button-mobile-portfolio');
