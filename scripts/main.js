@@ -124,18 +124,15 @@ const showWorkPopup = (index) => {
   // 1. Clear children (li's)
   tags.textContent = '';
   // 2. Loop over the technologies
-  let techIndex = 0;
-  tech.forEach(() => {
+  tech.forEach((elem, index) => {
     // 3. Create the element
     const el = document.createElement('li');
     // 4. Add classes
     el.classList.add('grey', 'text-green-dark');
     // 5. Add text
-    el.textContent = tech[techIndex];
+    el.textContent = tech[index];
     // 6. Add the element to the DOM
     tags.appendChild(el);
-
-    techIndex++;
   });
 
   // Show
@@ -146,15 +143,22 @@ const showWorkPopup = (index) => {
   }
 };
 
-// ==== Mobile nav open-close
+// ==== Generic close function for x buttons
+const close = document.querySelectorAll('.close-button');
+
+close.forEach((closeBtn) => {
+  const closeContainer = closeBtn.closest('.js-container');
+
+  closeBtn.addEventListener('click', () => hide(closeContainer));
+})
+
+// ==== Mobile nav
 const container = document.getElementById('mobile-menu-container');
 const open = document.getElementById('button-mobile-hamburger');
-const close = document.getElementById('button-mobile-close');
 
 open.addEventListener('click', () => show(container));
-close.addEventListener('click', () => hide(container));
 
-// ==== Mobile nav menu
+// Mobile nav menu
 const menuPortfolio = document.getElementById('button-mobile-portfolio');
 const menuAbout = document.getElementById('button-mobile-about');
 const menuContact = document.getElementById('button-mobile-contact');
@@ -165,10 +169,7 @@ menuContact.addEventListener('click', () => hide(container));
 
 // ==== Work popup
 const seeProjectButtons = document.querySelectorAll('.work-show-button');
-const buttonIndex = 0;
 
-seeProjectButtons.forEach((button) => {
-  button.onclick = () => showWorkPopup(buttonIndex);
-
-  buttonIndex++;
+seeProjectButtons.forEach((button, index) => {
+  button.onclick = () => showWorkPopup(index);
 });
