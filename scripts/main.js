@@ -79,6 +79,16 @@ function hide(toHide) {
   toHide.classList.add('hide');
 }
 
+// ==== Shorthand function for creating generic elements
+// elem = string, classes = array of string(s), parent = DOM element
+function addElem(elem, classes, parent) {
+  const createdElem = document.createElement(elem);
+  classes.forEach((cl) => createdElem.classList.add(cl));
+  parent.appendChild(createdElem);
+
+  return createdElem;
+}
+
 // ==== Show work popup function
 const showWorkPopup = (index) => {
   // Define the targets
@@ -328,6 +338,29 @@ const menuContact = document.getElementById('button-mobile-contact');
 menuPortfolio.addEventListener('click', () => hide(container));
 menuAbout.addEventListener('click', () => hide(container));
 menuContact.addEventListener('click', () => hide(container));
+
+// ==== Projects section content generator
+const workContainer = document.querySelector('.work-container');
+
+projects.forEach((project, index) => {
+  const workCard = addElem('li', ['work', 'grey'], workContainer);
+  addElem('div', ['work-image'], workCard);
+  const workDetails = addElem('div', ['work-details', 'white'], workCard);
+  const workTitle = addElem('div', ['work-title'], workDetails);
+  const workTitleTxt = addElem('h3', ['text-green-dark'], workTitle);
+  workTitleTxt.textContent = project.name;
+  const workTags = addElem('ul', ['work-tag'], workDetails);
+  let workTag;
+  project.technologiesMobile.forEach((tech) => {
+    workTag = addElem('li', ['grey', 'text-green-dark'], workTags);
+    workTag.textContent = tech;
+  });
+  const workButton = addElem('button', ['button-1', 'work-show-button'], workDetails);
+  workButton.setAttribute('type', 'button');
+  workButton.textContent = 'See Project';
+
+  workButton.onclick = () => showWorkPopup(index);
+});
 
 // ==== Work popup
 const seeProjectButtons = document.querySelectorAll('.work-show-button');
