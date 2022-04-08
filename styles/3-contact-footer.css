@@ -80,8 +80,6 @@
 
 .custom-validation-container {
   position: absolute;
-  /* top: -1px;
-  left: 150px; */
   top: -60px;
   left: -65px;
   display: flex;
@@ -94,10 +92,6 @@
   width: 250px;
   padding: 12px;
   color: #eb5834;
-}
-
-.custom-validation-container p {
-  
 }
 
 /* Footer section */
