@@ -426,3 +426,16 @@ form.addEventListener('input', () => {
     localStorage.setItem('formValues', JSON.stringify(formStorage));
   }
 });
+
+// Form auto-fill:
+// When the user loads the page, if there is any data in the local storage
+// the input fields are pre-filled with this data
+if (localStorage.getItem('formValues') !== undefined) {
+  // Parse the data
+  const formData = JSON.parse(localStorage.getItem('formValues'));
+
+  // Populate the form with the data
+  formName.value = formData.name;
+  formEmail.value = formData.email;
+  formMsg.value = formData.message;
+}
