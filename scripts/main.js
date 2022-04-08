@@ -371,12 +371,15 @@ seeProjectButtons.forEach((button, index) => {
 
 // Form validation
 const email = document.querySelector('#form-email'); // Don't forget to fix id typo in html
-
+const validationReport = document.getElementById('validation-report');
+const form = document.querySelector('form');
 email.addEventListener('input', () => {
-  if (/[A-Z]/.test(email)) {
-    email.setCustomValidity('email must be all lowercase!');
+  if (/[A-Z]/.test(email.value)) {
+    validationReport.textContent = 'email must be all lowercase!';
+    form.onsubmit = (e) => e.preventDefault();
     email.reportValidity();
   } else {
-    email.setCustomValidity('');
+    validationReport.textContent = '';
   }
 });
+
