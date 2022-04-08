@@ -30,16 +30,22 @@
               ><img src="images/icons/hamburger-menu.svg" alt="Menu"
             /></a>
           </div>
-          <div id="mobile-menu-container" class="nav-mobile-menu hide">
+          <div id="mobile-menu-container" class="js-container nav-mobile-menu hide">
             <div class="menu-close-container">
-              <a id="button-mobile-close" class="menu-close">
-                <img src="images/icons/close-button.svg" alt="close-button">
+              <a id="button-mobile-close" class="close-button">
+                <img src="images/icons/close-button.svg" alt="close-button" />
               </a>
             </div>
             <ul>
-              <li class="text-green-dark"><a href="#works" id="button-mobile-portfolio">Portfolio</a></li>
-              <li class="text-green-dark"><a href="#about-me" id="button-mobile-about">About</a></li>
-              <li class="text-green-dark"><a href="#contact-me" id="button-mobile-contact">Contact</a></li>
+              <li class="text-green-dark">
+                <a href="#works" id="button-mobile-portfolio">Portfolio</a>
+              </li>
+              <li class="text-green-dark">
+                <a href="#about-me" id="button-mobile-about">About</a>
+              </li>
+              <li class="text-green-dark">
+                <a href="#contact-me" id="button-mobile-contact">Contact</a>
+              </li>
             </ul>
           </div>
           <div class="nav-desktop">
@@ -131,120 +137,7 @@
         </div>
         <!-- Work container -->
         <ul class="work-container middle-section-grid">
-          <!-- Work 1 -->
-          <li class="work grey">
-            <div class="work-image">
-              <!-- Un-comment when there's an image to be put -->
-              <!-- <img src="" alt="" /> -->
-            </div>
-            <div class="work-details white">
-              <div class="work-title">
-                <h3 class="text-green-dark">Multi-Post Stories Gain+Glory</h3>
-              </div>
-              <ul class="work-tag">
-                <li class="grey text-green-dark">Ruby on Rails</li>
-                <li class="grey text-green-dark">css</li>
-                <li class="grey text-green-dark">JavaScript</li>
-                <li class="grey text-green-dark">html</li>
-              </ul>
-              <button type="button" class="button-1">See Project</button>
-            </div>
-          </li>
-          <!-- Work 2 -->
-          <li class="work grey">
-            <div class="work-image">
-              <!-- Un-comment when there's an image to be put -->
-              <!-- <img src="" alt="" /> -->
-            </div>
-            <div class="work-details white">
-              <div class="work-title">
-                <h3 class="text-green-dark">Multi-Post Stories Gain+Glory</h3>
-              </div>
-              <ul class="work-tag">
-                <li class="grey text-green-dark">Ruby on Rails</li>
-                <li class="grey text-green-dark">css</li>
-                <li class="grey text-green-dark">JavaScript</li>
-                <li class="grey text-green-dark">html</li>
-              </ul>
-              <button type="button" class="button-1">See Project</button>
-            </div>
-          </li>
-          <!-- Work 3 -->
-          <li class="work grey">
-            <div class="work-image">
-              <!-- Un-comment when there's an image to be put -->
-              <!-- <img src="" alt="" /> -->
-            </div>
-            <div class="work-details white">
-              <div class="work-title">
-                <h3 class="text-green-dark">Multi-Post Stories Gain+Glory</h3>
-              </div>
-              <ul class="work-tag">
-                <li class="grey text-green-dark">Ruby on Rails</li>
-                <li class="grey text-green-dark">css</li>
-                <li class="grey text-green-dark">JavaScript</li>
-                <li class="grey text-green-dark">html</li>
-              </ul>
-              <button type="button" class="button-1">See Project</button>
-            </div>
-          </li>
-          <!-- Work 4 -->
-          <li class="work grey">
-            <div class="work-image">
-              <!-- Un-comment when there's an image to be put -->
-              <!-- <img src="" alt="" /> -->
-            </div>
-            <div class="work-details white">
-              <div class="work-title">
-                <h3 class="text-green-dark">Multi-Post Stories Gain+Glory</h3>
-              </div>
-              <ul class="work-tag">
-                <li class="grey text-green-dark">Ruby on Rails</li>
-                <li class="grey text-green-dark">css</li>
-                <li class="grey text-green-dark">JavaScript</li>
-                <li class="grey text-green-dark">html</li>
-              </ul>
-              <button type="button" class="button-1">See Project</button>
-            </div>
-          </li>
-          <!-- Work 5 -->
-          <li class="work grey">
-            <div class="work-image">
-              <!-- Un-comment when there's an image to be put -->
-              <!-- <img src="" alt="" /> -->
-            </div>
-            <div class="work-details white">
-              <div class="work-title">
-                <h3 class="text-green-dark">Multi-Post Stories Gain+Glory</h3>
-              </div>
-              <ul class="work-tag">
-                <li class="grey text-green-dark">Ruby on Rails</li>
-                <li class="grey text-green-dark">css</li>
-                <li class="grey text-green-dark">JavaScript</li>
-                <li class="grey text-green-dark">html</li>
-              </ul>
-              <button type="button" class="button-1">See Project</button>
-            </div>
-          </li>
-          <!-- Work 6 -->
-          <li class="work grey">
-            <div class="work-image">
-              <!-- Un-comment when there's an image to be put -->
-              <!-- <img src="" alt="" /> -->
-            </div>
-            <div class="work-details white">
-              <div class="work-title">
-                <h3 class="text-green-dark">Multi-Post Stories Gain+Glory</h3>
-              </div>
-              <ul class="work-tag">
-                <li class="grey text-green-dark">Ruby on Rails</li>
-                <li class="grey text-green-dark">css</li>
-                <li class="grey text-green-dark">JavaScript</li>
-                <li class="grey text-green-dark">html</li>
-              </ul>
-              <button type="button" class="button-1">See Project</button>
-            </div>
-          </li>
+          <!-- Content is dynamically generated by js -->
         </ul>
       </section>
       <!-- ********** About me section ********** -->
@@ -330,7 +223,9 @@
               <form action="https://formspree.io/f/xoqrlzpz" method="post">
                 <ul class="contact-form">
                   <li>
-                    <label for="form-name" class="reader-only">Full Name: </label>
+                    <label for="form-name" class="reader-only"
+                      >Full Name:
+                    </label>
                     <input
                       id="form-name"
                       type="text"
@@ -351,7 +246,9 @@
                     />
                   </li>
                   <li>
-                    <label for="form-message" class="reader-only">Message: </label>
+                    <label for="form-message" class="reader-only"
+                      >Message:
+                    </label>
                     <textarea
                       id="form-message"
                       placeholder="Enter text here"

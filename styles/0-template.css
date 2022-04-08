@@ -94,6 +94,18 @@ p {
   margin: 0;
 }
 
+.font-600-32-44 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.font-700-32-44 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
+
 /* Buttons */
 .button-1 {
   background-color: #1e488f;
