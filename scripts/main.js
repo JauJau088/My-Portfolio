@@ -368,3 +368,15 @@ const seeProjectButtons = document.querySelectorAll('.work-show-button');
 seeProjectButtons.forEach((button, index) => {
   button.onclick = () => showWorkPopup(index);
 });
+
+// Form validation
+const email = document.querySelector('#form-email'); // Don't forget to fix id typo in html
+
+email.addEventListener('input', () => {
+  if (/[A-Z]/.test(email)) {
+    email.setCustomValidity('email must be all lowercase!');
+    email.reportValidity();
+  } else {
+    email.setCustomValidity('');
+  }
+});
