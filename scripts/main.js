@@ -370,16 +370,19 @@ seeProjectButtons.forEach((button, index) => {
 });
 
 // Form validation
-const email = document.querySelector('#form-email'); // Don't forget to fix id typo in html
+const email = document.querySelector('#form-email');
+const validationContainer = document.querySelector('.custom-validation-container');
 const validationReport = document.getElementById('validation-report');
 const form = document.querySelector('form');
+
 email.addEventListener('input', () => {
   if (/[A-Z]/.test(email.value)) {
     validationReport.textContent = 'email must be all lowercase!';
     form.onsubmit = (e) => e.preventDefault();
-    email.reportValidity();
+    show(validationContainer);
   } else {
     validationReport.textContent = '';
+    hide(validationContainer);
+    form.onsubmit = true;
   }
 });
-
