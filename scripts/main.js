@@ -391,6 +391,21 @@ formEmail.addEventListener('input', () => {
   }
 });
 
+// Extra layer of form validation.
+// Since we are saving local data, people can refresh the page and bypass
+// form validation's event listener above. That's why this is necessary
+form.onsubmit = (e) => {
+  if (/[A-Z]/.test(formEmail.value)) {
+    validationReport.textContent = 'email must be all lowercase!';
+    e.preventDefault();
+    show(validationContainer);
+  } else {
+    validationReport.textContent = '';
+    hide(validationContainer);
+    form.onsubmit = true;
+  }
+};
+
 // Form local storage availability checker function
 function isStorageAvailable(type) {
   let storage;
