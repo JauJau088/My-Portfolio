@@ -368,3 +368,21 @@ const seeProjectButtons = document.querySelectorAll('.work-show-button');
 seeProjectButtons.forEach((button, index) => {
   button.onclick = () => showWorkPopup(index);
 });
+
+// Form validation
+const email = document.querySelector('#form-email');
+const validationContainer = document.querySelector('.custom-validation-container');
+const validationReport = document.getElementById('validation-report');
+const form = document.querySelector('form');
+
+email.addEventListener('input', () => {
+  if (/[A-Z]/.test(email.value)) {
+    validationReport.textContent = 'email must be all lowercase!';
+    form.onsubmit = (e) => e.preventDefault();
+    show(validationContainer);
+  } else {
+    validationReport.textContent = '';
+    hide(validationContainer);
+    form.onsubmit = true;
+  }
+});

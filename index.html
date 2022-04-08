@@ -236,9 +236,9 @@
                     />
                   </li>
                   <li>
-                    <label for="from-email" class="reader-only">Email: </label>
+                    <label for="form-email" class="reader-only">Email: </label>
                     <input
-                      id="from-email"
+                      id="form-email"
                       type="email"
                       placeholder="Email address"
                       name="email"
@@ -257,8 +257,11 @@
                       required
                     ></textarea>
                   </li>
-                  <li>
+                  <li class="form-submit-container">
                     <button type="submit" class="button-1">Get in touch</button>
+                    <div class="custom-validation-container hide">
+                      <p id="validation-report"></p>
+                    </div>
                   </li>
                 </ul>
               </form>
