@@ -1,25 +1,25 @@
 // ==== Data
 const projects = [{
   // Project 1
-  name: 'Keeping track of hundreds of components',
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  imageMobile: 'images/backgrounds/snapshoot-portfolio.svg',
-  imageDesktop: 'images/backgrounds/snapshoot-portfolio-desktop.svg',
-  technologiesMobile: ['Ruby on Rails', 'css', 'JavaScript'],
-  technologiesDesktop: ['Codekit', 'GitHub', 'Javascript', 'Bootstrap', 'Terminal', 'Codepen'],
-  live: '#',
-  source: '#',
+  name: 'Sustainable development event website',
+  description: 'My first capstone project in Microverse. A Sustainable Development Event website made with HTML, SCSS, and JavaScript.',
+  imageMobile: './images/projects/sustainable-development-event.svg',
+  imageDesktop: './images/projects/sustainable-development-event.svg',
+  technologiesMobile: ['HTML', 'CSS', 'JavaScript'],
+  technologiesDesktop: ['HTML', 'CSS', 'JavaScript'],
+  live: 'https://jaujau088.github.io/capstone-one-sustainable-dev/index.html',
+  source: 'https://github.com/JauJau088/capstone-one-sustainable-dev',
 },
 {
   // Project 2
-  name: 'Keeping track of hundreds of components',
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  imageMobile: 'images/backgrounds/snapshoot-portfolio.svg',
-  imageDesktop: 'images/backgrounds/snapshoot-portfolio-desktop.svg',
-  technologiesMobile: ['Ruby on Rails', 'css', 'JavaScript'],
-  technologiesDesktop: ['Codekit', 'GitHub', 'Javascript', 'Bootstrap', 'Terminal', 'Codepen'],
-  live: '#',
-  source: '#',
+  name: 'Dynamic to-do list with ES6 modules and Webpack',
+  description: 'Dynamic todo list web app made with HTML, CSS, JavaScript, and Webpack with local storage data saving feature.',
+  imageMobile: './images/projects/todo-list.svg',
+  imageDesktop: './images/projects/todo-list.svg',
+  technologiesMobile: ['HTML', 'CSS', 'JavaScript(ES6)', 'Webpack'],
+  technologiesDesktop: ['HTML', 'CSS', 'JavaScript(ES6)', 'Webpack'],
+  live: 'https://jaujau088.github.io/todo-list-webpack/dist/',
+  source: 'https://github.com/JauJau088/todo-list-webpack',
 },
 {
   // Project 3
@@ -344,7 +344,8 @@ const workContainer = document.querySelector('.work-container');
 
 projects.forEach((project, index) => {
   const workCard = addElem('li', ['work', 'grey'], workContainer);
-  addElem('div', ['work-image'], workCard);
+  const workImg = addElem('div', ['work-image'], workCard);
+  workImg.style.backgroundImage = `url('${project.imageDesktop}')`;
   const workDetails = addElem('div', ['work-details', 'white'], workCard);
   const workTitle = addElem('div', ['work-title'], workDetails);
   const workTitleTxt = addElem('h3', ['text-green-dark'], workTitle);
